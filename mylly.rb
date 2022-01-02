@@ -3,12 +3,13 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Mylly < Formula
   desc "Init mill projects for scala"
-  homepage ""
+  homepage "https://github.com/ninpnin/mylly"
   url "https://github.com/ninpnin/mylly/archive/refs/tags/v0.1.1.zip"
   sha256 "a91a04011ce600e522c90719cc93eff6dfdf0305ce0f9d594f126d135a4f7e5a"
-  license ""
+  license "MIT"
 
   # depends_on "cmake" => :build
+  depends_on "python3"
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
@@ -28,6 +29,6 @@ class Mylly < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    system "true"
   end
 end
