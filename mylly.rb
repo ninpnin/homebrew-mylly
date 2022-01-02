@@ -4,8 +4,8 @@
 class Mylly < Formula
   desc "Init mill projects for scala"
   homepage "https://github.com/ninpnin/mylly"
-  url "https://github.com/ninpnin/mylly/archive/refs/tags/v0.1.1.zip"
-  sha256 "a91a04011ce600e522c90719cc93eff6dfdf0305ce0f9d594f126d135a4f7e5a"
+  url "https://github.com/ninpnin/mylly/archive/refs/tags/v0.1.2.zip"
+  sha256 "fe70366d793fb2bf4cfc783336b1bcd84336979a8fad063d3d6a6caec0ab30b5"
   license "MIT"
 
   # depends_on "cmake" => :build
@@ -17,6 +17,7 @@ class Mylly < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     system "./configure", *std_configure_args, "--disable-silent-rules"
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    bin.install "mylly.py" => "mylly"
   end
 
   test do
